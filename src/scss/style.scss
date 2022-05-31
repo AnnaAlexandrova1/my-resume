@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700');
 @import 'breakpoints';
+@import 'mixin';
 
 
 // Сбросить стили
@@ -153,7 +154,7 @@ textarea,
 select {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.85em;
-    color: #888;
+    color: #2A2928;
     font-weight: 300;
     font-size: 13pt;
 
@@ -172,16 +173,6 @@ a {
     }
 }
 
-b,
-strong {
-    font-weight: 600;
-    color: #3e3e3e;
-}
-
-i,
-em {
-    font-style: italic;
-}
 
 h1 {
     font-size: 3.25em;
@@ -387,3 +378,109 @@ button,
 }
 
 /* Раздел контакты*/
+.post-form {
+    width: 58%;
+    margin-top: 2em;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border: 2px solid white;
+
+    .row {
+        border: 2px solid blue;
+        display: grid;
+        justify-items: start;
+        gap: 0.5em;
+        column-gap: 0.5em;
+        justify-self: stretch;
+
+
+        grid-template-areas:
+            "A A A A   D D D D"
+            "B B B B   B B B B"
+            "C C C C   C C C C"
+            "C C C C   C C C C"
+            "C C C C   C C C C"
+            "E E E E   E E E E";
+
+        .col-6 {
+            display: grid;
+            grid-area: A;
+            justify-self: stretch;
+        }
+
+        .col-7 {
+            display: grid;
+            grid-area: D;
+            justify-self: stretch;
+
+        }
+
+        .col-11 {
+            display: grid;
+            grid-area: B;
+            justify-self: stretch;
+        }
+
+        .col-12 {
+            display: grid;
+            grid-area: C;
+            justify-self: stretch;
+        }
+
+        .col-13 {
+            display: grid;
+            grid-area: E;
+            justify-self: stretch;
+
+
+            .action {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    display: inline-block;
+                    margin: 0 0 0 1em;
+                    padding-left: 0;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+/* стилизация <hr>*/
+
+hr {
+    border: 0;
+    border-top: solid 1px #444;
+    border-top-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+    height: 1px;
+    margin: 3em 0;
+}
+
+.contаct-container {
+    .social {
+        padding-left: 20%;
+        padding-right: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    span {
+        display: none;
+    }
+
+    img {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
