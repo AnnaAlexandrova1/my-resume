@@ -549,14 +549,11 @@ hr {
 
 .contаct-container {
     .social {
-        padding-left: 20%;
-        padding-right: 20%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        display: grid;
+
     }
 
-    span {
+    .desc-invisible {
         display: none;
     }
 
